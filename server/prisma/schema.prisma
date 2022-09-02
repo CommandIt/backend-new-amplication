@@ -1,0 +1,62 @@
+datasource postgres {
+  provider = "postgresql"
+  url      = env("POSTGRESQL_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  commanders Commander[]
+  createdAt  DateTime    @default(now())
+  firstName  String?
+  id         String      @id @default(cuid())
+  lastName   String?
+  password   String
+  roles      String[]
+  updatedAt  DateTime    @updatedAt
+  username   String      @unique
+}
+
+model Commander {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  name      String?
+  team      Team?    @relation(fields: [teamId], references: [id])
+  teamId    String?
+  updatedAt DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id])
+  userId    String   @unique
+}
+
+model Solider {
+  createdAt DateTime  @default(now())
+  id        String    @id @default(cuid())
+  name      String?
+  opinions  Opinion[]
+  team      Team?     @relation(fields: [teamId], references: [id])
+  teamId    String?
+  updatedAt DateTime  @updatedAt
+}
+
+model Team {
+  commanders Commander[]
+  createdAt  DateTime    @default(now())
+  id         String      @id @default(cuid())
+  name       String?
+  soliders   Solider[]
+  updatedAt  DateTime    @updatedAt
+}
+
+model Opinion {
+  createdAt    DateTime @default(now())
+  energy       Float?
+  id           String   @id @default(cuid())
+  positivity   Float?
+  productivity Float?
+  solider      Solider  @relation(fields: [soliderId], references: [id])
+  soliderId    String
+  text         String?
+  updatedAt    DateTime @updatedAt
+}
