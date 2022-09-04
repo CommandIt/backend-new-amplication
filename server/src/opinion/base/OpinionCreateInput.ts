@@ -12,15 +12,24 @@ https://docs.amplication.com/docs/how-to/custom-code
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
 import {
+  IsDate,
   IsNumber,
   IsOptional,
   ValidateNested,
   IsString,
 } from "class-validator";
-import { SoliderWhereUniqueInput } from "../../solider/base/SoliderWhereUniqueInput";
 import { Type } from "class-transformer";
+import { SoliderWhereUniqueInput } from "../../solider/base/SoliderWhereUniqueInput";
 @InputType()
 class OpinionCreateInput {
+  @ApiProperty({
+    required: true,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @Field(() => Date)
+  date!: Date;
+
   @ApiProperty({
     required: false,
     type: Number,

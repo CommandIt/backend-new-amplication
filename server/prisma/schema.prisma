@@ -51,6 +51,7 @@ model Team {
 
 model Opinion {
   createdAt    DateTime @default(now())
+  date         DateTime
   energy       Float?
   id           String   @id @default(cuid())
   positivity   Float?

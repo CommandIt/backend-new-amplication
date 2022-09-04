@@ -14,6 +14,7 @@ export const OpinionShow = (props: ShowProps): React.ReactElement => {
     <Show {...props}>
       <SimpleShowLayout>
         <DateField source="createdAt" label="Created At" />
+        <TextField label="Date" source="date" />
         <TextField label="Energy" source="energy" />
         <TextField label="ID" source="id" />
         <TextField label="Positivity" source="positivity" />

@@ -4,6 +4,7 @@ import {
   Create,
   SimpleForm,
   CreateProps,
+  DateTimeInput,
   NumberInput,
   ReferenceInput,
   SelectInput,
@@ -16,6 +17,7 @@ export const OpinionCreate = (props: CreateProps): React.ReactElement => {
   return (
     <Create {...props}>
       <SimpleForm>
+        <DateTimeInput label="Date" source="date" />
         <NumberInput label="Energy" source="energy" />
         <NumberInput label="Positivity" source="positivity" />
         <NumberInput label="Productivity" source="productivity" />

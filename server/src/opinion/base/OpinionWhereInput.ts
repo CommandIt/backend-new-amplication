@@ -11,14 +11,26 @@ https://docs.amplication.com/docs/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { FloatNullableFilter } from "../../util/FloatNullableFilter";
+import { DateTimeFilter } from "../../util/DateTimeFilter";
 import { Type } from "class-transformer";
 import { IsOptional, ValidateNested } from "class-validator";
+import { FloatNullableFilter } from "../../util/FloatNullableFilter";
 import { StringFilter } from "../../util/StringFilter";
 import { SoliderWhereUniqueInput } from "../../solider/base/SoliderWhereUniqueInput";
 import { StringNullableFilter } from "../../util/StringNullableFilter";
 @InputType()
 class OpinionWhereInput {
+  @ApiProperty({
+    required: false,
+    type: DateTimeFilter,
+  })
+  @Type(() => DateTimeFilter)
+  @IsOptional()
+  @Field(() => DateTimeFilter, {
+    nullable: true,
+  })
+  date?: DateTimeFilter;
+
   @ApiProperty({
     required: false,
     type: FloatNullableFilter,
