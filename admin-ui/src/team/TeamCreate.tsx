@@ -10,7 +10,7 @@ import {
 } from "react-admin";
 
 import { CommanderTitle } from "../commander/CommanderTitle";
-import { SoliderTitle } from "../solider/SoliderTitle";
+import { SoldierTitle } from "../soldier/SoldierTitle";
 
 export const TeamCreate = (props: CreateProps): React.ReactElement => {
   return (
@@ -27,11 +27,11 @@ export const TeamCreate = (props: CreateProps): React.ReactElement => {
         <TextInput label="Name" source="name" />
         <ReferenceArrayInput
           source="soldier"
-          reference="Solider"
+          reference="Soldier"
           parse={(value: any) => value && value.map((v: any) => ({ id: v }))}
           format={(value: any) => value && value.map((v: any) => v.id)}
         >
-          <SelectArrayInput optionText={SoliderTitle} />
+          <SelectArrayInput optionText={SoldierTitle} />
         </ReferenceArrayInput>
       </SimpleForm>
     </Create>

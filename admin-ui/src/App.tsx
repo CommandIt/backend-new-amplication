@@ -13,10 +13,10 @@ import { CommanderList } from "./commander/CommanderList";
 import { CommanderCreate } from "./commander/CommanderCreate";
 import { CommanderEdit } from "./commander/CommanderEdit";
 import { CommanderShow } from "./commander/CommanderShow";
-import { SoliderList } from "./solider/SoliderList";
-import { SoliderCreate } from "./solider/SoliderCreate";
-import { SoliderEdit } from "./solider/SoliderEdit";
-import { SoliderShow } from "./solider/SoliderShow";
+import { SoldierList } from "./soldier/SoldierList";
+import { SoldierCreate } from "./soldier/SoldierCreate";
+import { SoldierEdit } from "./soldier/SoldierEdit";
+import { SoldierShow } from "./soldier/SoldierShow";
 import { TeamList } from "./team/TeamList";
 import { TeamCreate } from "./team/TeamCreate";
 import { TeamEdit } from "./team/TeamEdit";
@@ -66,11 +66,11 @@ const App = (): React.ReactElement => {
           show={CommanderShow}
         />
         <Resource
-          name="Solider"
-          list={SoliderList}
-          edit={SoliderEdit}
-          create={SoliderCreate}
-          show={SoliderShow}
+          name="Soldier"
+          list={SoldierList}
+          edit={SoldierEdit}
+          create={SoldierCreate}
+          show={SoldierShow}
         />
         <Resource
           name="Team"

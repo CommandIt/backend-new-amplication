@@ -19,7 +19,7 @@ import {
   ValidateNested,
 } from "class-validator";
 import { Type } from "class-transformer";
-import { Solider } from "../../solider/base/Solider";
+import { Soldier } from "../../soldier/base/Soldier";
 @ObjectType()
 class Opinion {
   @ApiProperty({
@@ -81,11 +81,11 @@ class Opinion {
 
   @ApiProperty({
     required: true,
-    type: () => Solider,
+    type: () => Soldier,
   })
   @ValidateNested()
-  @Type(() => Solider)
-  soldier?: Solider;
+  @Type(() => Soldier)
+  soldier?: Soldier;
 
   @ApiProperty({
     required: false,

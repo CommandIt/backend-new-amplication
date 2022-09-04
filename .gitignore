@@ -1,0 +1,3 @@
+.vscode/launch.json
+schema.graphql
+server/prisma/migrations/*

@@ -61,31 +61,31 @@
   },
   {
     "role": "user",
-    "resource": "Solider",
+    "resource": "Soldier",
     "action": "read:own",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Solider",
+    "resource": "Soldier",
     "action": "create:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Solider",
+    "resource": "Soldier",
     "action": "update:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Solider",
+    "resource": "Soldier",
     "action": "delete:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Solider",
+    "resource": "Soldier",
     "action": "read:any",
     "attributes": "*"
   },

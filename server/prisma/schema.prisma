@@ -30,7 +30,7 @@ model Commander {
   userId    String   @unique
 }
 
-model Solider {
+model Soldier {
   createdAt DateTime  @default(now())
   id        String    @id @default(cuid())
   name      String?
@@ -45,7 +45,7 @@ model Team {
   createdAt  DateTime    @default(now())
   id         String      @id @default(cuid())
   name       String?
-  soldier    Solider[]
+  soldier    Soldier[]
   updatedAt  DateTime    @updatedAt
 }
 
@@ -56,7 +56,7 @@ model Opinion {
   id           String   @id @default(cuid())
   positivity   Float?
   productivity Float?
-  soldier      Solider  @relation(fields: [soldierId], references: [id])
+  soldier      Soldier  @relation(fields: [soldierId], references: [id])
   soldierId    String
   text         String?
   updatedAt    DateTime @updatedAt

@@ -11,7 +11,7 @@ import {
   TextInput,
 } from "react-admin";
 
-import { SoliderTitle } from "../solider/SoliderTitle";
+import { SoldierTitle } from "../soldier/SoldierTitle";
 
 export const OpinionEdit = (props: EditProps): React.ReactElement => {
   return (
@@ -21,8 +21,8 @@ export const OpinionEdit = (props: EditProps): React.ReactElement => {
         <NumberInput label="Energy" source="energy" />
         <NumberInput label="Positivity" source="positivity" />
         <NumberInput label="Productivity" source="productivity" />
-        <ReferenceInput source="solider.id" reference="Solider" label="Soldier">
-          <SelectInput optionText={SoliderTitle} />
+        <ReferenceInput source="soldier.id" reference="Soldier" label="Soldier">
+          <SelectInput optionText={SoldierTitle} />
         </ReferenceInput>
         <TextInput label="Text" source="text" />
       </SimpleForm>

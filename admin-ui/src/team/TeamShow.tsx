@@ -41,7 +41,7 @@ export const TeamShow = (props: ShowProps): React.ReactElement => {
           </Datagrid>
         </ReferenceManyField>
         <ReferenceManyField
-          reference="Solider"
+          reference="Soldier"
           target="TeamId"
           label="Soldiers"
         >

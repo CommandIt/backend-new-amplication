@@ -3,7 +3,7 @@ import { APP_INTERCEPTOR } from "@nestjs/core";
 import { MorganInterceptor, MorganModule } from "nest-morgan";
 import { UserModule } from "./user/user.module";
 import { CommanderModule } from "./commander/commander.module";
-import { SoliderModule } from "./solider/solider.module";
+import { SoldierModule } from "./soldier/soldier.module";
 import { TeamModule } from "./team/team.module";
 import { OpinionModule } from "./opinion/opinion.module";
 import { ACLModule } from "./auth/acl.module";
@@ -20,7 +20,7 @@ import { GraphQLModule } from "@nestjs/graphql";
   imports: [
     UserModule,
     CommanderModule,
-    SoliderModule,
+    SoldierModule,
     TeamModule,
     OpinionModule,
     ACLModule,
