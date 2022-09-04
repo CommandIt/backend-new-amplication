@@ -5,6 +5,6 @@ export type OpinionCreateInput = {
   energy?: number | null;
   positivity?: number | null;
   productivity?: number | null;
-  solider: SoliderWhereUniqueInput;
+  soldier: SoliderWhereUniqueInput;
   text?: string | null;
 };

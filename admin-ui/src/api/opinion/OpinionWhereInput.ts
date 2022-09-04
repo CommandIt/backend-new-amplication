@@ -10,6 +10,6 @@ export type OpinionWhereInput = {
   id?: StringFilter;
   positivity?: FloatNullableFilter;
   productivity?: FloatNullableFilter;
-  solider?: SoliderWhereUniqueInput;
+  soldier?: SoliderWhereUniqueInput;
   text?: StringNullableFilter;
 };

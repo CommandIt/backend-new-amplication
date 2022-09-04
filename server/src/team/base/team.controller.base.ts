@@ -297,14 +297,14 @@ export class TeamControllerBase {
     action: "read",
     possession: "any",
   })
-  @common.Get("/:id/soliders")
+  @common.Get("/:id/soldier")
   @ApiNestedQuery(SoliderFindManyArgs)
-  async findManySoliders(
+  async findManySoldier(
     @common.Req() request: Request,
     @common.Param() params: TeamWhereUniqueInput
   ): Promise<Solider[]> {
     const query = plainToClass(SoliderFindManyArgs, request.query);
-    const results = await this.service.findSoliders(params.id, {
+    const results = await this.service.findSoldier(params.id, {
       ...query,
       select: {
         createdAt: true,
@@ -333,13 +333,13 @@ export class TeamControllerBase {
     action: "update",
     possession: "any",
   })
-  @common.Post("/:id/soliders")
-  async connectSoliders(
+  @common.Post("/:id/soldier")
+  async connectSoldier(
     @common.Param() params: TeamWhereUniqueInput,
     @common.Body() body: SoliderWhereUniqueInput[]
   ): Promise<void> {
     const data = {
-      soliders: {
+      soldier: {
         connect: body,
       },
     };
@@ -355,13 +355,13 @@ export class TeamControllerBase {
     action: "update",
     possession: "any",
   })
-  @common.Patch("/:id/soliders")
-  async updateSoliders(
+  @common.Patch("/:id/soldier")
+  async updateSoldier(
     @common.Param() params: TeamWhereUniqueInput,
     @common.Body() body: SoliderWhereUniqueInput[]
   ): Promise<void> {
     const data = {
-      soliders: {
+      soldier: {
         set: body,
       },
     };
@@ -377,13 +377,13 @@ export class TeamControllerBase {
     action: "update",
     possession: "any",
   })
-  @common.Delete("/:id/soliders")
-  async disconnectSoliders(
+  @common.Delete("/:id/soldier")
+  async disconnectSoldier(
     @common.Param() params: TeamWhereUniqueInput,
     @common.Body() body: SoliderWhereUniqueInput[]
   ): Promise<void> {
     const data = {
-      soliders: {
+      soldier: {
         disconnect: body,
       },
     };

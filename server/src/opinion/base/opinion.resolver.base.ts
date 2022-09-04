@@ -100,8 +100,8 @@ export class OpinionResolverBase {
       data: {
         ...args.data,
 
-        solider: {
-          connect: args.data.solider,
+        soldier: {
+          connect: args.data.soldier,
         },
       },
     });
@@ -123,8 +123,8 @@ export class OpinionResolverBase {
         data: {
           ...args.data,
 
-          solider: {
-            connect: args.data.solider,
+          soldier: {
+            connect: args.data.soldier,
           },
         },
       });
@@ -166,8 +166,8 @@ export class OpinionResolverBase {
     action: "read",
     possession: "any",
   })
-  async solider(@graphql.Parent() parent: Opinion): Promise<Solider | null> {
-    const result = await this.service.getSolider(parent.id);
+  async soldier(@graphql.Parent() parent: Opinion): Promise<Solider | null> {
+    const result = await this.service.getSoldier(parent.id);
 
     if (!result) {
       return null;

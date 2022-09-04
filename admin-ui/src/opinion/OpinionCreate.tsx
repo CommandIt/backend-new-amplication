@@ -21,7 +21,7 @@ export const OpinionCreate = (props: CreateProps): React.ReactElement => {
         <NumberInput label="Energy" source="energy" />
         <NumberInput label="Positivity" source="positivity" />
         <NumberInput label="Productivity" source="productivity" />
-        <ReferenceInput source="solider.id" reference="Solider" label="Solider">
+        <ReferenceInput source="solider.id" reference="Solider" label="Soldier">
           <SelectInput optionText={SoliderTitle} />
         </ReferenceInput>
         <TextInput label="Text" source="text" />

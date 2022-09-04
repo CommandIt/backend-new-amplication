@@ -58,7 +58,7 @@ export class TeamServiceBase {
       .commanders(args);
   }
 
-  async findSoliders(
+  async findSoldier(
     parentId: string,
     args: Prisma.SoliderFindManyArgs
   ): Promise<Solider[]> {
@@ -66,6 +66,6 @@ export class TeamServiceBase {
       .findUnique({
         where: { id: parentId },
       })
-      .soliders(args);
+      .soldier(args);
   }
 }

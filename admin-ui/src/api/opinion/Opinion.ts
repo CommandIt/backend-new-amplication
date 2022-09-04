@@ -7,7 +7,7 @@ export type Opinion = {
   id: string;
   positivity: number | null;
   productivity: number | null;
-  solider?: Solider;
+  soldier?: Solider;
   text: string | null;
   updatedAt: Date;
 };

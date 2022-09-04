@@ -167,11 +167,11 @@ export class TeamResolverBase {
     action: "read",
     possession: "any",
   })
-  async soliders(
+  async soldier(
     @graphql.Parent() parent: Team,
     @graphql.Args() args: SoliderFindManyArgs
   ): Promise<Solider[]> {
-    const results = await this.service.findSoliders(parent.id, args);
+    const results = await this.service.findSoldier(parent.id, args);
 
     if (!results) {
       return [];

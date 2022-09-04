@@ -70,7 +70,7 @@ class OpinionCreateInput {
   @ValidateNested()
   @Type(() => SoliderWhereUniqueInput)
   @Field(() => SoliderWhereUniqueInput)
-  solider!: SoliderWhereUniqueInput;
+  soldier!: SoliderWhereUniqueInput;
 
   @ApiProperty({
     required: false,

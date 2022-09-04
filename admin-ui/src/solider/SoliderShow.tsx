@@ -38,7 +38,7 @@ export const SoliderShow = (props: ShowProps): React.ReactElement => {
             <TextField label="Positivity" source="positivity" />
             <TextField label="Productivity" source="productivity" />
             <ReferenceField
-              label="Solider"
+              label="Soldier"
               source="solider.id"
               reference="Solider"
             >

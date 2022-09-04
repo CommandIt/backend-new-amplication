@@ -79,7 +79,7 @@ class OpinionOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
-  soliderId?: SortOrder;
+  soldierId?: SortOrder;
 
   @ApiProperty({
     required: false,

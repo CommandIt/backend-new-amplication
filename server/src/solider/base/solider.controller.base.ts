@@ -253,7 +253,7 @@ export class SoliderControllerBase {
         positivity: true,
         productivity: true,
 
-        solider: {
+        soldier: {
           select: {
             id: true,
           },
