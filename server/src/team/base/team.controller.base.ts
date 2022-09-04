@@ -30,9 +30,9 @@ import { Team } from "./Team";
 import { CommanderFindManyArgs } from "../../commander/base/CommanderFindManyArgs";
 import { Commander } from "../../commander/base/Commander";
 import { CommanderWhereUniqueInput } from "../../commander/base/CommanderWhereUniqueInput";
-import { SoliderFindManyArgs } from "../../solider/base/SoliderFindManyArgs";
-import { Solider } from "../../solider/base/Solider";
-import { SoliderWhereUniqueInput } from "../../solider/base/SoliderWhereUniqueInput";
+import { SoldierFindManyArgs } from "../../soldier/base/SoldierFindManyArgs";
+import { Soldier } from "../../soldier/base/Soldier";
+import { SoldierWhereUniqueInput } from "../../soldier/base/SoldierWhereUniqueInput";
 @swagger.ApiBearerAuth()
 @common.UseGuards(defaultAuthGuard.DefaultAuthGuard, nestAccessControl.ACGuard)
 export class TeamControllerBase {
@@ -293,18 +293,18 @@ export class TeamControllerBase {
 
   @common.UseInterceptors(AclFilterResponseInterceptor)
   @nestAccessControl.UseRoles({
-    resource: "Solider",
+    resource: "Soldier",
     action: "read",
     possession: "any",
   })
-  @common.Get("/:id/soliders")
-  @ApiNestedQuery(SoliderFindManyArgs)
-  async findManySoliders(
+  @common.Get("/:id/soldier")
+  @ApiNestedQuery(SoldierFindManyArgs)
+  async findManySoldier(
     @common.Req() request: Request,
     @common.Param() params: TeamWhereUniqueInput
-  ): Promise<Solider[]> {
-    const query = plainToClass(SoliderFindManyArgs, request.query);
-    const results = await this.service.findSoliders(params.id, {
+  ): Promise<Soldier[]> {
+    const query = plainToClass(SoldierFindManyArgs, request.query);
+    const results = await this.service.findSoldier(params.id, {
       ...query,
       select: {
         createdAt: true,
@@ -333,13 +333,13 @@ export class TeamControllerBase {
     action: "update",
     possession: "any",
   })
-  @common.Post("/:id/soliders")
-  async connectSoliders(
+  @common.Post("/:id/soldier")
+  async connectSoldier(
     @common.Param() params: TeamWhereUniqueInput,
-    @common.Body() body: SoliderWhereUniqueInput[]
+    @common.Body() body: SoldierWhereUniqueInput[]
   ): Promise<void> {
     const data = {
-      soliders: {
+      soldier: {
         connect: body,
       },
     };
@@ -355,13 +355,13 @@ export class TeamControllerBase {
     action: "update",
     possession: "any",
   })
-  @common.Patch("/:id/soliders")
-  async updateSoliders(
+  @common.Patch("/:id/soldier")
+  async updateSoldier(
     @common.Param() params: TeamWhereUniqueInput,
-    @common.Body() body: SoliderWhereUniqueInput[]
+    @common.Body() body: SoldierWhereUniqueInput[]
   ): Promise<void> {
     const data = {
-      soliders: {
+      soldier: {
         set: body,
       },
     };
@@ -377,13 +377,13 @@ export class TeamControllerBase {
     action: "update",
     possession: "any",
   })
-  @common.Delete("/:id/soliders")
-  async disconnectSoliders(
+  @common.Delete("/:id/soldier")
+  async disconnectSoldier(
     @common.Param() params: TeamWhereUniqueInput,
-    @common.Body() body: SoliderWhereUniqueInput[]
+    @common.Body() body: SoldierWhereUniqueInput[]
   ): Promise<void> {
     const data = {
-      soliders: {
+      soldier: {
         disconnect: body,
       },
     };

@@ -1,4 +1,4 @@
-import { Solider } from "../solider/Solider";
+import { Soldier } from "../soldier/Soldier";
 
 export type Opinion = {
   createdAt: Date;
@@ -7,7 +7,7 @@ export type Opinion = {
   id: string;
   positivity: number | null;
   productivity: number | null;
-  solider?: Solider;
+  soldier?: Soldier;
   text: string | null;
   updatedAt: Date;
 };

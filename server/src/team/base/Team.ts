@@ -14,7 +14,7 @@ import { ApiProperty } from "@nestjs/swagger";
 import { Commander } from "../../commander/base/Commander";
 import { ValidateNested, IsOptional, IsDate, IsString } from "class-validator";
 import { Type } from "class-transformer";
-import { Solider } from "../../solider/base/Solider";
+import { Soldier } from "../../soldier/base/Soldier";
 @ObjectType()
 class Team {
   @ApiProperty({
@@ -55,12 +55,12 @@ class Team {
 
   @ApiProperty({
     required: false,
-    type: () => [Solider],
+    type: () => [Soldier],
   })
   @ValidateNested()
-  @Type(() => Solider)
+  @Type(() => Soldier)
   @IsOptional()
-  soliders?: Array<Solider>;
+  soldier?: Array<Soldier>;
 
   @ApiProperty({
     required: true,

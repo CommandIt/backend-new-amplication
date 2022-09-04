@@ -7,7 +7,7 @@ export type OpinionOrderByInput = {
   id?: SortOrder;
   positivity?: SortOrder;
   productivity?: SortOrder;
-  soliderId?: SortOrder;
+  soldierId?: SortOrder;
   text?: SortOrder;
   updatedAt?: SortOrder;
 };

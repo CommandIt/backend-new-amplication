@@ -25,7 +25,7 @@ import { DeleteOpinionArgs } from "./DeleteOpinionArgs";
 import { OpinionFindManyArgs } from "./OpinionFindManyArgs";
 import { OpinionFindUniqueArgs } from "./OpinionFindUniqueArgs";
 import { Opinion } from "./Opinion";
-import { Solider } from "../../solider/base/Solider";
+import { Soldier } from "../../soldier/base/Soldier";
 import { OpinionService } from "../opinion.service";
 
 @graphql.Resolver(() => Opinion)
@@ -100,8 +100,8 @@ export class OpinionResolverBase {
       data: {
         ...args.data,
 
-        solider: {
-          connect: args.data.solider,
+        soldier: {
+          connect: args.data.soldier,
         },
       },
     });
@@ -123,8 +123,8 @@ export class OpinionResolverBase {
         data: {
           ...args.data,
 
-          solider: {
-            connect: args.data.solider,
+          soldier: {
+            connect: args.data.soldier,
           },
         },
       });
@@ -160,14 +160,14 @@ export class OpinionResolverBase {
   }
 
   @common.UseInterceptors(AclFilterResponseInterceptor)
-  @graphql.ResolveField(() => Solider, { nullable: true })
+  @graphql.ResolveField(() => Soldier, { nullable: true })
   @nestAccessControl.UseRoles({
-    resource: "Solider",
+    resource: "Soldier",
     action: "read",
     possession: "any",
   })
-  async solider(@graphql.Parent() parent: Opinion): Promise<Solider | null> {
-    const result = await this.service.getSolider(parent.id);
+  async soldier(@graphql.Parent() parent: Opinion): Promise<Soldier | null> {
+    const result = await this.service.getSoldier(parent.id);
 
     if (!result) {
       return null;

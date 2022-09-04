@@ -1,11 +1,11 @@
 import { Commander } from "../commander/Commander";
-import { Solider } from "../solider/Solider";
+import { Soldier } from "../soldier/Soldier";
 
 export type Team = {
   commanders?: Array<Commander>;
   createdAt: Date;
   id: string;
   name: string | null;
-  soliders?: Array<Solider>;
+  soldier?: Array<Soldier>;
   updatedAt: Date;
 };

@@ -1,8 +1,8 @@
 import { CommanderCreateNestedManyWithoutTeamsInput } from "./CommanderCreateNestedManyWithoutTeamsInput";
-import { SoliderCreateNestedManyWithoutTeamsInput } from "./SoliderCreateNestedManyWithoutTeamsInput";
+import { SoldierCreateNestedManyWithoutTeamsInput } from "./SoldierCreateNestedManyWithoutTeamsInput";
 
 export type TeamCreateInput = {
   commanders?: CommanderCreateNestedManyWithoutTeamsInput;
   name?: string | null;
-  soliders?: SoliderCreateNestedManyWithoutTeamsInput;
+  soldier?: SoldierCreateNestedManyWithoutTeamsInput;
 };

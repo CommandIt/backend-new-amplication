@@ -16,7 +16,7 @@ import { ValidateNested, IsOptional } from "class-validator";
 import { Type } from "class-transformer";
 import { StringFilter } from "../../util/StringFilter";
 import { StringNullableFilter } from "../../util/StringNullableFilter";
-import { SoliderListRelationFilter } from "../../solider/base/SoliderListRelationFilter";
+import { SoldierListRelationFilter } from "../../soldier/base/SoldierListRelationFilter";
 @InputType()
 class TeamWhereInput {
   @ApiProperty({
@@ -55,14 +55,14 @@ class TeamWhereInput {
 
   @ApiProperty({
     required: false,
-    type: () => SoliderListRelationFilter,
+    type: () => SoldierListRelationFilter,
   })
   @ValidateNested()
-  @Type(() => SoliderListRelationFilter)
+  @Type(() => SoldierListRelationFilter)
   @IsOptional()
-  @Field(() => SoliderListRelationFilter, {
+  @Field(() => SoldierListRelationFilter, {
     nullable: true,
   })
-  soliders?: SoliderListRelationFilter;
+  soldier?: SoldierListRelationFilter;
 }
 export { TeamWhereInput };

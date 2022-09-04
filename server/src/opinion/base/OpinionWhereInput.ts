@@ -16,7 +16,7 @@ import { Type } from "class-transformer";
 import { IsOptional, ValidateNested } from "class-validator";
 import { FloatNullableFilter } from "../../util/FloatNullableFilter";
 import { StringFilter } from "../../util/StringFilter";
-import { SoliderWhereUniqueInput } from "../../solider/base/SoliderWhereUniqueInput";
+import { SoldierWhereUniqueInput } from "../../soldier/base/SoldierWhereUniqueInput";
 import { StringNullableFilter } from "../../util/StringNullableFilter";
 @InputType()
 class OpinionWhereInput {
@@ -77,15 +77,15 @@ class OpinionWhereInput {
 
   @ApiProperty({
     required: false,
-    type: () => SoliderWhereUniqueInput,
+    type: () => SoldierWhereUniqueInput,
   })
   @ValidateNested()
-  @Type(() => SoliderWhereUniqueInput)
+  @Type(() => SoldierWhereUniqueInput)
   @IsOptional()
-  @Field(() => SoliderWhereUniqueInput, {
+  @Field(() => SoldierWhereUniqueInput, {
     nullable: true,
   })
-  solider?: SoliderWhereUniqueInput;
+  soldier?: SoldierWhereUniqueInput;
 
   @ApiProperty({
     required: false,

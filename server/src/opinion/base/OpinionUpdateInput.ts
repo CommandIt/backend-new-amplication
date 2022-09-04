@@ -19,7 +19,7 @@ import {
   IsString,
 } from "class-validator";
 import { Type } from "class-transformer";
-import { SoliderWhereUniqueInput } from "../../solider/base/SoliderWhereUniqueInput";
+import { SoldierWhereUniqueInput } from "../../soldier/base/SoldierWhereUniqueInput";
 @InputType()
 class OpinionUpdateInput {
   @ApiProperty({
@@ -68,15 +68,15 @@ class OpinionUpdateInput {
 
   @ApiProperty({
     required: false,
-    type: () => SoliderWhereUniqueInput,
+    type: () => SoldierWhereUniqueInput,
   })
   @ValidateNested()
-  @Type(() => SoliderWhereUniqueInput)
+  @Type(() => SoldierWhereUniqueInput)
   @IsOptional()
-  @Field(() => SoliderWhereUniqueInput, {
+  @Field(() => SoldierWhereUniqueInput, {
     nullable: true,
   })
-  solider?: SoliderWhereUniqueInput;
+  soldier?: SoldierWhereUniqueInput;
 
   @ApiProperty({
     required: false,
