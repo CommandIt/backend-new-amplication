@@ -10,35 +10,35 @@ https://docs.amplication.com/docs/how-to/custom-code
 ------------------------------------------------------------------------------
   */
 import { InputType, Field } from "@nestjs/graphql";
-import { SoliderWhereUniqueInput } from "../../solider/base/SoliderWhereUniqueInput";
+import { SoldierWhereUniqueInput } from "../../soldier/base/SoldierWhereUniqueInput";
 import { ApiProperty } from "@nestjs/swagger";
 @InputType()
-class SoliderUpdateManyWithoutTeamsInput {
-  @Field(() => [SoliderWhereUniqueInput], {
+class SoldierUpdateManyWithoutTeamsInput {
+  @Field(() => [SoldierWhereUniqueInput], {
     nullable: true,
   })
   @ApiProperty({
     required: false,
-    type: () => [SoliderWhereUniqueInput],
+    type: () => [SoldierWhereUniqueInput],
   })
-  connect?: Array<SoliderWhereUniqueInput>;
+  connect?: Array<SoldierWhereUniqueInput>;
 
-  @Field(() => [SoliderWhereUniqueInput], {
+  @Field(() => [SoldierWhereUniqueInput], {
     nullable: true,
   })
   @ApiProperty({
     required: false,
-    type: () => [SoliderWhereUniqueInput],
+    type: () => [SoldierWhereUniqueInput],
   })
-  disconnect?: Array<SoliderWhereUniqueInput>;
+  disconnect?: Array<SoldierWhereUniqueInput>;
 
-  @Field(() => [SoliderWhereUniqueInput], {
+  @Field(() => [SoldierWhereUniqueInput], {
     nullable: true,
   })
   @ApiProperty({
     required: false,
-    type: () => [SoliderWhereUniqueInput],
+    type: () => [SoldierWhereUniqueInput],
   })
-  set?: Array<SoliderWhereUniqueInput>;
+  set?: Array<SoldierWhereUniqueInput>;
 }
-export { SoliderUpdateManyWithoutTeamsInput };
+export { SoldierUpdateManyWithoutTeamsInput };

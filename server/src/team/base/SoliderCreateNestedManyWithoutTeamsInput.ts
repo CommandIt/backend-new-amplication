@@ -10,17 +10,17 @@ https://docs.amplication.com/docs/how-to/custom-code
 ------------------------------------------------------------------------------
   */
 import { InputType, Field } from "@nestjs/graphql";
-import { SoliderWhereUniqueInput } from "../../solider/base/SoliderWhereUniqueInput";
+import { SoldierWhereUniqueInput } from "../../soldier/base/SoldierWhereUniqueInput";
 import { ApiProperty } from "@nestjs/swagger";
 @InputType()
-class SoliderCreateNestedManyWithoutTeamsInput {
-  @Field(() => [SoliderWhereUniqueInput], {
+class SoldierCreateNestedManyWithoutTeamsInput {
+  @Field(() => [SoldierWhereUniqueInput], {
     nullable: true,
   })
   @ApiProperty({
     required: false,
-    type: () => [SoliderWhereUniqueInput],
+    type: () => [SoldierWhereUniqueInput],
   })
-  connect?: Array<SoliderWhereUniqueInput>;
+  connect?: Array<SoldierWhereUniqueInput>;
 }
-export { SoliderCreateNestedManyWithoutTeamsInput };
+export { SoldierCreateNestedManyWithoutTeamsInput };
