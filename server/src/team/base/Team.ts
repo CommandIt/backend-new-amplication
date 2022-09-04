@@ -60,7 +60,7 @@ class Team {
   @ValidateNested()
   @Type(() => Solider)
   @IsOptional()
-  soliders?: Array<Solider>;
+  soldier?: Array<Solider>;
 
   @ApiProperty({
     required: true,

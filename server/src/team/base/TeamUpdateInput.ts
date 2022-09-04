@@ -50,6 +50,6 @@ class TeamUpdateInput {
   @Field(() => SoliderUpdateManyWithoutTeamsInput, {
     nullable: true,
   })
-  soliders?: SoliderUpdateManyWithoutTeamsInput;
+  soldier?: SoliderUpdateManyWithoutTeamsInput;
 }
 export { TeamUpdateInput };

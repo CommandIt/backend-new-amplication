@@ -63,6 +63,6 @@ class TeamWhereInput {
   @Field(() => SoliderListRelationFilter, {
     nullable: true,
   })
-  soliders?: SoliderListRelationFilter;
+  soldier?: SoliderListRelationFilter;
 }
 export { TeamWhereInput };

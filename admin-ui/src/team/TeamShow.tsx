@@ -43,7 +43,7 @@ export const TeamShow = (props: ShowProps): React.ReactElement => {
         <ReferenceManyField
           reference="Solider"
           target="TeamId"
-          label="Soliders"
+          label="Soldiers"
         >
           <Datagrid rowClick="show">
             <DateField source="createdAt" label="Created At" />

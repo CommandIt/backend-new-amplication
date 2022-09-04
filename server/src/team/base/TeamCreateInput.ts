@@ -50,6 +50,6 @@ class TeamCreateInput {
   @Field(() => SoliderCreateNestedManyWithoutTeamsInput, {
     nullable: true,
   })
-  soliders?: SoliderCreateNestedManyWithoutTeamsInput;
+  soldier?: SoliderCreateNestedManyWithoutTeamsInput;
 }
 export { TeamCreateInput };

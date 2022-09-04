@@ -49,8 +49,8 @@ export class OpinionControllerBase {
       data: {
         ...data,
 
-        solider: {
-          connect: data.solider,
+        soldier: {
+          connect: data.soldier,
         },
       },
       select: {
@@ -61,7 +61,7 @@ export class OpinionControllerBase {
         positivity: true,
         productivity: true,
 
-        solider: {
+        soldier: {
           select: {
             id: true,
           },
@@ -95,7 +95,7 @@ export class OpinionControllerBase {
         positivity: true,
         productivity: true,
 
-        solider: {
+        soldier: {
           select: {
             id: true,
           },
@@ -130,7 +130,7 @@ export class OpinionControllerBase {
         positivity: true,
         productivity: true,
 
-        solider: {
+        soldier: {
           select: {
             id: true,
           },
@@ -168,8 +168,8 @@ export class OpinionControllerBase {
         data: {
           ...data,
 
-          solider: {
-            connect: data.solider,
+          soldier: {
+            connect: data.soldier,
           },
         },
         select: {
@@ -180,7 +180,7 @@ export class OpinionControllerBase {
           positivity: true,
           productivity: true,
 
-          solider: {
+          soldier: {
             select: {
               id: true,
             },
@@ -223,7 +223,7 @@ export class OpinionControllerBase {
           positivity: true,
           productivity: true,
 
-          solider: {
+          soldier: {
             select: {
               id: true,
             },

@@ -6,6 +6,6 @@ export type Team = {
   createdAt: Date;
   id: string;
   name: string | null;
-  soliders?: Array<Solider>;
+  soldier?: Array<Solider>;
   updatedAt: Date;
 };

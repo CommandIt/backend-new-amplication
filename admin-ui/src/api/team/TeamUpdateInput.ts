@@ -4,5 +4,5 @@ import { SoliderUpdateManyWithoutTeamsInput } from "./SoliderUpdateManyWithoutTe
 export type TeamUpdateInput = {
   commanders?: CommanderUpdateManyWithoutTeamsInput;
   name?: string | null;
-  soliders?: SoliderUpdateManyWithoutTeamsInput;
+  soldier?: SoliderUpdateManyWithoutTeamsInput;
 };

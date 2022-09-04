@@ -85,7 +85,7 @@ class Opinion {
   })
   @ValidateNested()
   @Type(() => Solider)
-  solider?: Solider;
+  soldier?: Solider;
 
   @ApiProperty({
     required: false,
