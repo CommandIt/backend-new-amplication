@@ -27,8 +27,8 @@ import { TeamFindUniqueArgs } from "./TeamFindUniqueArgs";
 import { Team } from "./Team";
 import { CommanderFindManyArgs } from "../../commander/base/CommanderFindManyArgs";
 import { Commander } from "../../commander/base/Commander";
-import { SoliderFindManyArgs } from "../../solider/base/SoliderFindManyArgs";
-import { Solider } from "../../solider/base/Solider";
+import { SoldierFindManyArgs } from "../../soldier/base/SoldierFindManyArgs";
+import { Soldier } from "../../soldier/base/Soldier";
 import { TeamService } from "../team.service";
 
 @graphql.Resolver(() => Team)
@@ -161,16 +161,16 @@ export class TeamResolverBase {
   }
 
   @common.UseInterceptors(AclFilterResponseInterceptor)
-  @graphql.ResolveField(() => [Solider])
+  @graphql.ResolveField(() => [Soldier])
   @nestAccessControl.UseRoles({
-    resource: "Solider",
+    resource: "Soldier",
     action: "read",
     possession: "any",
   })
   async soldier(
     @graphql.Parent() parent: Team,
-    @graphql.Args() args: SoliderFindManyArgs
-  ): Promise<Solider[]> {
+    @graphql.Args() args: SoldierFindManyArgs
+  ): Promise<Soldier[]> {
     const results = await this.service.findSoldier(parent.id, args);
 
     if (!results) {

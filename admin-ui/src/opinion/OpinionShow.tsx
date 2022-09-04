@@ -7,7 +7,7 @@ import {
   TextField,
   ReferenceField,
 } from "react-admin";
-import { SOLIDER_TITLE_FIELD } from "../solider/SoliderTitle";
+import { SOLDIER_TITLE_FIELD } from "../soldier/SoldierTitle";
 
 export const OpinionShow = (props: ShowProps): React.ReactElement => {
   return (
@@ -19,8 +19,8 @@ export const OpinionShow = (props: ShowProps): React.ReactElement => {
         <TextField label="ID" source="id" />
         <TextField label="Positivity" source="positivity" />
         <TextField label="Productivity" source="productivity" />
-        <ReferenceField label="Soldier" source="solider.id" reference="Solider">
-          <TextField source={SOLIDER_TITLE_FIELD} />
+        <ReferenceField label="Soldier" source="soldier.id" reference="Soldier">
+          <TextField source={SOLDIER_TITLE_FIELD} />
         </ReferenceField>
         <TextField label="Text" source="text" />
         <DateField source="updatedAt" label="Updated At" />

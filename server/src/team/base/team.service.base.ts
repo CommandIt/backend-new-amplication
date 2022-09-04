@@ -10,7 +10,7 @@ https://docs.amplication.com/docs/how-to/custom-code
 ------------------------------------------------------------------------------
   */
 import { PrismaService } from "nestjs-prisma";
-import { Prisma, Team, Commander, Solider } from "@prisma/client";
+import { Prisma, Team, Commander, Soldier } from "@prisma/client";
 
 export class TeamServiceBase {
   constructor(protected readonly prisma: PrismaService) {}
@@ -60,8 +60,8 @@ export class TeamServiceBase {
 
   async findSoldier(
     parentId: string,
-    args: Prisma.SoliderFindManyArgs
-  ): Promise<Solider[]> {
+    args: Prisma.SoldierFindManyArgs
+  ): Promise<Soldier[]> {
     return this.prisma.team
       .findUnique({
         where: { id: parentId },

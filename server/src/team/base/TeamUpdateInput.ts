@@ -14,7 +14,7 @@ import { ApiProperty } from "@nestjs/swagger";
 import { CommanderUpdateManyWithoutTeamsInput } from "./CommanderUpdateManyWithoutTeamsInput";
 import { ValidateNested, IsOptional, IsString } from "class-validator";
 import { Type } from "class-transformer";
-import { SoliderUpdateManyWithoutTeamsInput } from "./SoliderUpdateManyWithoutTeamsInput";
+import { SoldierUpdateManyWithoutTeamsInput } from "./SoldierUpdateManyWithoutTeamsInput";
 @InputType()
 class TeamUpdateInput {
   @ApiProperty({
@@ -42,14 +42,14 @@ class TeamUpdateInput {
 
   @ApiProperty({
     required: false,
-    type: () => SoliderUpdateManyWithoutTeamsInput,
+    type: () => SoldierUpdateManyWithoutTeamsInput,
   })
   @ValidateNested()
-  @Type(() => SoliderUpdateManyWithoutTeamsInput)
+  @Type(() => SoldierUpdateManyWithoutTeamsInput)
   @IsOptional()
-  @Field(() => SoliderUpdateManyWithoutTeamsInput, {
+  @Field(() => SoldierUpdateManyWithoutTeamsInput, {
     nullable: true,
   })
-  soldier?: SoliderUpdateManyWithoutTeamsInput;
+  soldier?: SoldierUpdateManyWithoutTeamsInput;
 }
 export { TeamUpdateInput };

@@ -25,7 +25,7 @@ import { DeleteOpinionArgs } from "./DeleteOpinionArgs";
 import { OpinionFindManyArgs } from "./OpinionFindManyArgs";
 import { OpinionFindUniqueArgs } from "./OpinionFindUniqueArgs";
 import { Opinion } from "./Opinion";
-import { Solider } from "../../solider/base/Solider";
+import { Soldier } from "../../soldier/base/Soldier";
 import { OpinionService } from "../opinion.service";
 
 @graphql.Resolver(() => Opinion)
@@ -160,13 +160,13 @@ export class OpinionResolverBase {
   }
 
   @common.UseInterceptors(AclFilterResponseInterceptor)
-  @graphql.ResolveField(() => Solider, { nullable: true })
+  @graphql.ResolveField(() => Soldier, { nullable: true })
   @nestAccessControl.UseRoles({
-    resource: "Solider",
+    resource: "Soldier",
     action: "read",
     possession: "any",
   })
-  async soldier(@graphql.Parent() parent: Opinion): Promise<Solider | null> {
+  async soldier(@graphql.Parent() parent: Opinion): Promise<Soldier | null> {
     const result = await this.service.getSoldier(parent.id);
 
     if (!result) {
