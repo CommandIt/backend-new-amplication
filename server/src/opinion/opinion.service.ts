@@ -10,8 +10,9 @@ export class OpinionService extends OpinionServiceBase {
   }
 
   async getByDateRange(soldierId: string, startDate: Date, endDate: Date): Promise<Opinion[]> {
+    console.log('soldier:', soldierId);
     return this.findMany({
-      where: {date: {gte: startDate, lte: endDate}}
+      where: {soldierId: soldierId, date: {gte: startDate, lte: endDate}}
     });
   }
 }
