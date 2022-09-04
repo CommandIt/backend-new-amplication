@@ -13,5 +13,36 @@ export async function customSeed() {
     },
   });
 
+  const teamId = '1';
+  await client.team.update({
+    where: {id: teamId},
+    data: {
+      id: teamId,
+      name: "The Squad Team",
+    }
+  });
+
+  const soldierIds = ['11', '22', '33', '44', '55', '66'];
+  await client.solider.createMany({
+    data: [
+      {name: 'Ben Hason', teamId: teamId, id: soldierIds[0]},
+      {name: 'Ziv Caspi', teamId: teamId, id: soldierIds[1]},
+      {name: 'Shahar Ofer', teamId: teamId, id: soldierIds[2]},
+      {name: 'Rom Cohen', teamId: teamId, id: soldierIds[3]},
+      {name: 'Mike Merkman', teamId: teamId, id: soldierIds[4]},
+      {name: 'Itay Chechick', teamId: teamId, id: soldierIds[5]},
+    ]
+  });
+
+  await client.opinion.createMany({
+    data: [
+      {soliderId: soldierIds[0], date: new Date(2022, 1), text: 'loser 1'},
+      {soliderId: soldierIds[0], date: new Date(2022, 2), text: 'loser mamash 2'},
+      {soliderId: soldierIds[0], date: new Date(2022, 3), text: 'loser aho shiling 3'},
+      {soliderId: soldierIds[0], date: new Date(2022, 4), text: 'loser efes 4'},
+      {soliderId: soldierIds[0], date: new Date(2022, 5), text: 'loser garoha 5'},
+    ]
+  })
+
   client.$disconnect();
 }
