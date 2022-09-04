@@ -22,10 +22,10 @@ export class OpinionResolver extends OpinionResolverBase {
 
   @graphql.Query(() => [Opinion])
   async getOpinionsByDate(
-    @Args('soliderId') soliderId: string,
+    @Args('soldierId') soldier: string,
     @Args('startDate') startDate: Date,
     @Args('endDate') endDate: Date
   ): Promise<Opinion[]> {
-   return await this.service.getByDateRange(soliderId, startDate, endDate);
+   return await this.service.getByDateRange(soldier, startDate, endDate);
   }
 }

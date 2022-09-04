@@ -23,7 +23,7 @@ export async function customSeed() {
   });
 
   const soldierIds = ['11', '22', '33', '44', '55', '66'];
-  await client.solider.createMany({
+  await client.soldier.createMany({
     data: [
       {name: 'Ben Hason', teamId: teamId, id: soldierIds[0]},
       {name: 'Ziv Caspi', teamId: teamId, id: soldierIds[1]},
@@ -36,11 +36,11 @@ export async function customSeed() {
 
   await client.opinion.createMany({
     data: [
-      {soliderId: soldierIds[0], date: new Date(2022, 1), text: 'loser 1'},
-      {soliderId: soldierIds[0], date: new Date(2022, 2), text: 'loser mamash 2'},
-      {soliderId: soldierIds[0], date: new Date(2022, 3), text: 'loser aho shiling 3'},
-      {soliderId: soldierIds[0], date: new Date(2022, 4), text: 'loser efes 4'},
-      {soliderId: soldierIds[0], date: new Date(2022, 5), text: 'loser garoha 5'},
+      {soldierId: soldierIds[0], date: new Date(2022, 1), text: 'loser 1'},
+      {soldierId: soldierIds[0], date: new Date(2022, 2), text: 'loser mamash 2'},
+      {soldierId: soldierIds[0], date: new Date(2022, 3), text: 'loser aho shiling 3'},
+      {soldierId: soldierIds[0], date: new Date(2022, 4), text: 'loser efes 4'},
+      {soldierId: soldierIds[0], date: new Date(2022, 5), text: 'loser garoha 5'},
     ]
   })
 
