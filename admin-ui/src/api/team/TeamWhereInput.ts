@@ -7,5 +7,5 @@ export type TeamWhereInput = {
   commanders?: CommanderListRelationFilter;
   id?: StringFilter;
   name?: StringNullableFilter;
-  soliders?: SoliderListRelationFilter;
+  soldier?: SoliderListRelationFilter;
 };

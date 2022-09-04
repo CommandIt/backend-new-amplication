@@ -26,7 +26,7 @@ export const TeamEdit = (props: EditProps): React.ReactElement => {
         </ReferenceArrayInput>
         <TextInput label="Name" source="name" />
         <ReferenceArrayInput
-          source="soliders"
+          source="soldier"
           reference="Solider"
           parse={(value: any) => value && value.map((v: any) => ({ id: v }))}
           format={(value: any) => value && value.map((v: any) => v.id)}

@@ -19,7 +19,7 @@ export const OpinionShow = (props: ShowProps): React.ReactElement => {
         <TextField label="ID" source="id" />
         <TextField label="Positivity" source="positivity" />
         <TextField label="Productivity" source="productivity" />
-        <ReferenceField label="Solider" source="solider.id" reference="Solider">
+        <ReferenceField label="Soldier" source="solider.id" reference="Solider">
           <TextField source={SOLIDER_TITLE_FIELD} />
         </ReferenceField>
         <TextField label="Text" source="text" />

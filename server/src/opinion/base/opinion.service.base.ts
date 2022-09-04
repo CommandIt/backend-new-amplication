@@ -47,11 +47,11 @@ export class OpinionServiceBase {
     return this.prisma.opinion.delete(args);
   }
 
-  async getSolider(parentId: string): Promise<Solider | null> {
+  async getSoldier(parentId: string): Promise<Solider | null> {
     return this.prisma.opinion
       .findUnique({
         where: { id: parentId },
       })
-      .solider();
+      .soldier();
   }
 }

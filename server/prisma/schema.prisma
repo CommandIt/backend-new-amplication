@@ -45,7 +45,7 @@ model Team {
   createdAt  DateTime    @default(now())
   id         String      @id @default(cuid())
   name       String?
-  soliders   Solider[]
+  soldier    Solider[]
   updatedAt  DateTime    @updatedAt
 }
 
@@ -56,8 +56,8 @@ model Opinion {
   id           String   @id @default(cuid())
   positivity   Float?
   productivity Float?
-  solider      Solider  @relation(fields: [soliderId], references: [id])
-  soliderId    String
+  soldier      Solider  @relation(fields: [soldierId], references: [id])
+  soldierId    String
   text         String?
   updatedAt    DateTime @updatedAt
 }

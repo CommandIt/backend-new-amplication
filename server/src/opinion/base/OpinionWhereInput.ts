@@ -85,7 +85,7 @@ class OpinionWhereInput {
   @Field(() => SoliderWhereUniqueInput, {
     nullable: true,
   })
-  solider?: SoliderWhereUniqueInput;
+  soldier?: SoliderWhereUniqueInput;
 
   @ApiProperty({
     required: false,
