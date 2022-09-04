@@ -12,6 +12,7 @@ const nonExistingId = "nonExistingId";
 const existingId = "existingId";
 const CREATE_INPUT = {
   createdAt: new Date(),
+  date: new Date(),
   energy: 42.42,
   id: "exampleId",
   positivity: 42.42,
@@ -21,6 +22,7 @@ const CREATE_INPUT = {
 };
 const CREATE_RESULT = {
   createdAt: new Date(),
+  date: new Date(),
   energy: 42.42,
   id: "exampleId",
   positivity: 42.42,
@@ -31,6 +33,7 @@ const CREATE_RESULT = {
 const FIND_MANY_RESULT = [
   {
     createdAt: new Date(),
+    date: new Date(),
     energy: 42.42,
     id: "exampleId",
     positivity: 42.42,
@@ -41,6 +44,7 @@ const FIND_MANY_RESULT = [
 ];
 const FIND_ONE_RESULT = {
   createdAt: new Date(),
+  date: new Date(),
   energy: 42.42,
   id: "exampleId",
   positivity: 42.42,
@@ -113,6 +117,7 @@ describe("Opinion", () => {
       .expect({
         ...CREATE_RESULT,
         createdAt: CREATE_RESULT.createdAt.toISOString(),
+        date: CREATE_RESULT.date.toISOString(),
         updatedAt: CREATE_RESULT.updatedAt.toISOString(),
       });
   });
@@ -125,6 +130,7 @@ describe("Opinion", () => {
         {
           ...FIND_MANY_RESULT[0],
           createdAt: FIND_MANY_RESULT[0].createdAt.toISOString(),
+          date: FIND_MANY_RESULT[0].date.toISOString(),
           updatedAt: FIND_MANY_RESULT[0].updatedAt.toISOString(),
         },
       ]);
@@ -148,6 +154,7 @@ describe("Opinion", () => {
       .expect({
         ...FIND_ONE_RESULT,
         createdAt: FIND_ONE_RESULT.createdAt.toISOString(),
+        date: FIND_ONE_RESULT.date.toISOString(),
         updatedAt: FIND_ONE_RESULT.updatedAt.toISOString(),
       });
   });

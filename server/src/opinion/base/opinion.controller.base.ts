@@ -55,6 +55,7 @@ export class OpinionControllerBase {
       },
       select: {
         createdAt: true,
+        date: true,
         energy: true,
         id: true,
         positivity: true,
@@ -88,6 +89,7 @@ export class OpinionControllerBase {
       ...args,
       select: {
         createdAt: true,
+        date: true,
         energy: true,
         id: true,
         positivity: true,
@@ -122,6 +124,7 @@ export class OpinionControllerBase {
       where: params,
       select: {
         createdAt: true,
+        date: true,
         energy: true,
         id: true,
         positivity: true,
@@ -171,6 +174,7 @@ export class OpinionControllerBase {
         },
         select: {
           createdAt: true,
+          date: true,
           energy: true,
           id: true,
           positivity: true,
@@ -213,6 +217,7 @@ export class OpinionControllerBase {
         where: params,
         select: {
           createdAt: true,
+          date: true,
           energy: true,
           id: true,
           positivity: true,

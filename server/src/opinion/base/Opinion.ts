@@ -31,6 +31,14 @@ class Opinion {
   createdAt!: Date;
 
   @ApiProperty({
+    required: true,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @Field(() => Date)
+  date!: Date;
+
+  @ApiProperty({
     required: false,
     type: Number,
   })

@@ -247,6 +247,7 @@ export class SoliderControllerBase {
       ...query,
       select: {
         createdAt: true,
+        date: true,
         energy: true,
         id: true,
         positivity: true,
