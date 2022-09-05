@@ -17,9 +17,12 @@ import {
   IsOptional,
   IsString,
   ValidateNested,
+  IsJSON,
 } from "class-validator";
 import { Type } from "class-transformer";
 import { Soldier } from "../../soldier/base/Soldier";
+import { GraphQLJSONObject } from "graphql-type-json";
+import { JsonValue } from "type-fest";
 @ObjectType()
 class Opinion {
   @ApiProperty({
@@ -89,14 +92,13 @@ class Opinion {
 
   @ApiProperty({
     required: false,
-    type: String,
   })
-  @IsString()
+  @IsJSON()
   @IsOptional()
-  @Field(() => String, {
+  @Field(() => GraphQLJSONObject, {
     nullable: true,
   })
-  text!: string | null;
+  text!: JsonValue;
 
   @ApiProperty({
     required: true,

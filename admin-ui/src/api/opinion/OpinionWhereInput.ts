@@ -2,7 +2,7 @@ import { DateTimeFilter } from "../../util/DateTimeFilter";
 import { FloatNullableFilter } from "../../util/FloatNullableFilter";
 import { StringFilter } from "../../util/StringFilter";
 import { SoldierWhereUniqueInput } from "../soldier/SoldierWhereUniqueInput";
-import { StringNullableFilter } from "../../util/StringNullableFilter";
+import { JsonFilter } from "../../util/JsonFilter";
 
 export type OpinionWhereInput = {
   date?: DateTimeFilter;
@@ -11,5 +11,5 @@ export type OpinionWhereInput = {
   positivity?: FloatNullableFilter;
   productivity?: FloatNullableFilter;
   soldier?: SoldierWhereUniqueInput;
-  text?: StringNullableFilter;
+  text?: JsonFilter;
 };

@@ -16,10 +16,12 @@ import {
   IsNumber,
   IsOptional,
   ValidateNested,
-  IsString,
+  IsJSON,
 } from "class-validator";
 import { Type } from "class-transformer";
 import { SoldierWhereUniqueInput } from "../../soldier/base/SoldierWhereUniqueInput";
+import { GraphQLJSONObject } from "graphql-type-json";
+import { InputJsonValue } from "../../types";
 @InputType()
 class OpinionCreateInput {
   @ApiProperty({
@@ -74,13 +76,12 @@ class OpinionCreateInput {
 
   @ApiProperty({
     required: false,
-    type: String,
   })
-  @IsString()
+  @IsJSON()
   @IsOptional()
-  @Field(() => String, {
+  @Field(() => GraphQLJSONObject, {
     nullable: true,
   })
-  text?: string | null;
+  text?: InputJsonValue;
 }
 export { OpinionCreateInput };

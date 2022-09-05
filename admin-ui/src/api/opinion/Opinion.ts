@@ -1,4 +1,5 @@
 import { Soldier } from "../soldier/Soldier";
+import { JsonValue } from "type-fest";
 
 export type Opinion = {
   createdAt: Date;
@@ -8,6 +9,6 @@ export type Opinion = {
   positivity: number | null;
   productivity: number | null;
   soldier?: Soldier;
-  text: string | null;
+  text: JsonValue;
   updatedAt: Date;
 };

@@ -17,7 +17,6 @@ const CREATE_INPUT = {
   id: "exampleId",
   positivity: 42.42,
   productivity: 42.42,
-  text: "exampleText",
   updatedAt: new Date(),
 };
 const CREATE_RESULT = {
@@ -27,7 +26,6 @@ const CREATE_RESULT = {
   id: "exampleId",
   positivity: 42.42,
   productivity: 42.42,
-  text: "exampleText",
   updatedAt: new Date(),
 };
 const FIND_MANY_RESULT = [
@@ -38,7 +36,6 @@ const FIND_MANY_RESULT = [
     id: "exampleId",
     positivity: 42.42,
     productivity: 42.42,
-    text: "exampleText",
     updatedAt: new Date(),
   },
 ];
@@ -49,7 +46,6 @@ const FIND_ONE_RESULT = {
   id: "exampleId",
   positivity: 42.42,
   productivity: 42.42,
-  text: "exampleText",
   updatedAt: new Date(),
 };
 

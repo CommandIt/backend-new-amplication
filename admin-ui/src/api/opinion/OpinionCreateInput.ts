@@ -1,4 +1,5 @@
 import { SoldierWhereUniqueInput } from "../soldier/SoldierWhereUniqueInput";
+import { InputJsonValue } from "../../types";
 
 export type OpinionCreateInput = {
   date: Date;
@@ -6,5 +7,5 @@ export type OpinionCreateInput = {
   positivity?: number | null;
   productivity?: number | null;
   soldier: SoldierWhereUniqueInput;
-  text?: string | null;
+  text?: InputJsonValue;
 };
