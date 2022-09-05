@@ -59,6 +59,6 @@ model Opinion {
   productivity Float?
   soldier      Soldier  @relation(fields: [soldierId], references: [id])
   soldierId    String
-  text         String?
+  text         Json?
   updatedAt    DateTime @updatedAt
 }

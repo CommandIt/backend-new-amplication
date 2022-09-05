@@ -17,7 +17,7 @@ import { IsOptional, ValidateNested } from "class-validator";
 import { FloatNullableFilter } from "../../util/FloatNullableFilter";
 import { StringFilter } from "../../util/StringFilter";
 import { SoldierWhereUniqueInput } from "../../soldier/base/SoldierWhereUniqueInput";
-import { StringNullableFilter } from "../../util/StringNullableFilter";
+import { JsonFilter } from "../../util/JsonFilter";
 @InputType()
 class OpinionWhereInput {
   @ApiProperty({
@@ -89,13 +89,13 @@ class OpinionWhereInput {
 
   @ApiProperty({
     required: false,
-    type: StringNullableFilter,
+    type: JsonFilter,
   })
-  @Type(() => StringNullableFilter)
+  @Type(() => JsonFilter)
   @IsOptional()
-  @Field(() => StringNullableFilter, {
+  @Field(() => JsonFilter, {
     nullable: true,
   })
-  text?: StringNullableFilter;
+  text?: JsonFilter;
 }
 export { OpinionWhereInput };

@@ -8,7 +8,6 @@ import {
   NumberInput,
   ReferenceInput,
   SelectInput,
-  TextInput,
 } from "react-admin";
 
 import { SoldierTitle } from "../soldier/SoldierTitle";
@@ -24,7 +23,7 @@ export const OpinionCreate = (props: CreateProps): React.ReactElement => {
         <ReferenceInput source="soldier.id" reference="Soldier" label="Soldier">
           <SelectInput optionText={SoldierTitle} />
         </ReferenceInput>
-        <TextInput label="Text" source="text" />
+        <div />
       </SimpleForm>
     </Create>
   );
