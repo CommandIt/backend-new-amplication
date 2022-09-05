@@ -60,6 +60,7 @@ export class SoldierControllerBase {
       },
       select: {
         createdAt: true,
+        description: true,
         id: true,
         name: true,
 
@@ -90,6 +91,7 @@ export class SoldierControllerBase {
       ...args,
       select: {
         createdAt: true,
+        description: true,
         id: true,
         name: true,
 
@@ -121,6 +123,7 @@ export class SoldierControllerBase {
       where: params,
       select: {
         createdAt: true,
+        description: true,
         id: true,
         name: true,
 
@@ -169,6 +172,7 @@ export class SoldierControllerBase {
         },
         select: {
           createdAt: true,
+          description: true,
           id: true,
           name: true,
 
@@ -208,6 +212,7 @@ export class SoldierControllerBase {
         where: params,
         select: {
           createdAt: true,
+          description: true,
           id: true,
           name: true,
 

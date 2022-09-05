@@ -308,6 +308,7 @@ export class TeamControllerBase {
       ...query,
       select: {
         createdAt: true,
+        description: true,
         id: true,
         name: true,
 

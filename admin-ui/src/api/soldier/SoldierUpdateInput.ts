@@ -2,6 +2,7 @@ import { OpinionUpdateManyWithoutSoldiersInput } from "./OpinionUpdateManyWithou
 import { TeamWhereUniqueInput } from "../team/TeamWhereUniqueInput";
 
 export type SoldierUpdateInput = {
+  description?: string | null;
   name?: string | null;
   opinions?: OpinionUpdateManyWithoutSoldiersInput;
   team?: TeamWhereUniqueInput | null;
