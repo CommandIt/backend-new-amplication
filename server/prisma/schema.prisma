@@ -31,13 +31,14 @@ model Commander {
 }
 
 model Soldier {
-  createdAt DateTime  @default(now())
-  id        String    @id @default(cuid())
-  name      String?
-  opinions  Opinion[]
-  team      Team?     @relation(fields: [teamId], references: [id])
-  teamId    String?
-  updatedAt DateTime  @updatedAt
+  createdAt   DateTime  @default(now())
+  description String?
+  id          String    @id @default(cuid())
+  name        String?
+  opinions    Opinion[]
+  team        Team?     @relation(fields: [teamId], references: [id])
+  teamId      String?
+  updatedAt   DateTime  @updatedAt
 }
 
 model Team {

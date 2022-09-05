@@ -18,6 +18,7 @@ export const SoldierEdit = (props: EditProps): React.ReactElement => {
   return (
     <Edit {...props}>
       <SimpleForm>
+        <TextInput label="Description" source="description" />
         <TextInput label="Name" source="name" />
         <ReferenceArrayInput
           source="opinions"
