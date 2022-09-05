@@ -11,24 +11,25 @@ https://docs.amplication.com/docs/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { StringNullableFilter } from "../../util/StringNullableFilter";
+import { JsonFilter } from "../../util/JsonFilter";
 import { Type } from "class-transformer";
 import { IsOptional, ValidateNested } from "class-validator";
 import { StringFilter } from "../../util/StringFilter";
+import { StringNullableFilter } from "../../util/StringNullableFilter";
 import { OpinionListRelationFilter } from "../../opinion/base/OpinionListRelationFilter";
 import { TeamWhereUniqueInput } from "../../team/base/TeamWhereUniqueInput";
 @InputType()
 class SoldierWhereInput {
   @ApiProperty({
     required: false,
-    type: StringNullableFilter,
+    type: JsonFilter,
   })
-  @Type(() => StringNullableFilter)
+  @Type(() => JsonFilter)
   @IsOptional()
-  @Field(() => StringNullableFilter, {
+  @Field(() => JsonFilter, {
     nullable: true,
   })
-  description?: StringNullableFilter;
+  description?: JsonFilter;
 
   @ApiProperty({
     required: false,
