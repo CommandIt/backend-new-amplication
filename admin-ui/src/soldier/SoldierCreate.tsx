@@ -18,7 +18,7 @@ export const SoldierCreate = (props: CreateProps): React.ReactElement => {
   return (
     <Create {...props}>
       <SimpleForm>
-        <TextInput label="Description" source="description" />
+        <div />
         <TextInput label="Name" source="name" />
         <ReferenceArrayInput
           source="opinions"

@@ -32,7 +32,7 @@ model Commander {
 
 model Soldier {
   createdAt   DateTime  @default(now())
-  description String?
+  description Json?
   id          String    @id @default(cuid())
   name        String?
   opinions    Opinion[]

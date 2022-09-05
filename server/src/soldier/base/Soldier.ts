@@ -11,8 +11,16 @@ https://docs.amplication.com/docs/how-to/custom-code
   */
 import { ObjectType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsDate, IsString, IsOptional, ValidateNested } from "class-validator";
+import {
+  IsDate,
+  IsJSON,
+  IsOptional,
+  IsString,
+  ValidateNested,
+} from "class-validator";
 import { Type } from "class-transformer";
+import { GraphQLJSONObject } from "graphql-type-json";
+import { JsonValue } from "type-fest";
 import { Opinion } from "../../opinion/base/Opinion";
 import { Team } from "../../team/base/Team";
 @ObjectType()
@@ -27,14 +35,13 @@ class Soldier {
 
   @ApiProperty({
     required: false,
-    type: String,
   })
-  @IsString()
+  @IsJSON()
   @IsOptional()
-  @Field(() => String, {
+  @Field(() => GraphQLJSONObject, {
     nullable: true,
   })
-  description!: string | null;
+  description!: JsonValue;
 
   @ApiProperty({
     required: true,

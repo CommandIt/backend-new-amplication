@@ -1,9 +1,10 @@
+import { JsonValue } from "type-fest";
 import { Opinion } from "../opinion/Opinion";
 import { Team } from "../team/Team";
 
 export type Soldier = {
   createdAt: Date;
-  description: string | null;
+  description: JsonValue;
   id: string;
   name: string | null;
   opinions?: Array<Opinion>;
