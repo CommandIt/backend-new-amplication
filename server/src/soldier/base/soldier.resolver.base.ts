@@ -111,13 +111,13 @@ export class SoldierResolverBase {
     });
   }
 
-  @common.UseInterceptors(AclValidateRequestInterceptor)
+  // @common.UseInterceptors(AclValidateRequestInterceptor)
   @graphql.Mutation(() => Soldier)
-  @nestAccessControl.UseRoles({
-    resource: "Soldier",
-    action: "update",
-    possession: "any",
-  })
+  // @nestAccessControl.UseRoles({
+  //   resource: "Soldier",
+  //   action: "update",
+  //   possession: "any",
+  // })
   async updateSoldier(
     @graphql.Args() args: UpdateSoldierArgs
   ): Promise<Soldier | null> {
